@@ -9,7 +9,7 @@ function Create() {
     const [loading , setLoading] =useState(false)
     const router = useRouter();
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e: { preventDefault: () => void; }) => {
         e.preventDefault();
         setLoading(true)
 
