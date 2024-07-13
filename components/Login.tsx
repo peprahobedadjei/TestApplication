@@ -30,7 +30,7 @@ function Login() {
     }
   }, [router]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     if (name && selectedProfile) {
       const user = { name, profile: selectedProfile };
