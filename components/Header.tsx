@@ -5,7 +5,7 @@ function Header() {
     const[username, setusename]=useState('')
 
     useEffect(()=>{
-        const user = JSON.parse(localStorage.getItem("user"))
+        const user = JSON.parse(localStorage.getItem("user")|| '{}')
         if(user && user.name){
             setusename(user.name)
         }
